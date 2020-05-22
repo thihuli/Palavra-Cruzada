@@ -1,18 +1,25 @@
 import React from 'react';
-import { ButtonContainer, ButtonText, Icon} from './styles';
+import { ButtonContainer, ButtonText} from './styles';
 import { FontAwesome } from '@expo/vector-icons';
 
 const CustomButton = (props) => {
-  const {onPress}  = props
+  const {
+    onPress,
+    icon,
+    background,
+    iconSize,
+    iconColor,
+    textColor,
+    text
+  }  = props;
 
   return (
       <ButtonContainer 
         onPress={onPress}
-        background={props.background}>
-        <Icon>
-          <FontAwesome name={props.nameIcon} size={props.sizeIcon} color={props.colorIcon} />
-        </Icon>
-        <ButtonText  textcolor={props.textcolor}>{props.text}</ButtonText>
+        background={background}
+        icon={icon}>
+        <FontAwesome name={icon} size={iconSize} color={iconColor} />
+        <ButtonText textColor={textColor}>{text}</ButtonText>
       </ButtonContainer> 
   );
 }

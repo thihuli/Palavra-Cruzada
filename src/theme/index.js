@@ -1,15 +1,16 @@
 const theme = {
   palette: {
 		primary: {
-			main: '#399ece',
-			light: '#74cfff',
-			dark: '#00709d'
+			main: '#0E6564',
+			light: '#489392',
+			dark: '#003a3a',
+			contrastText: "#ffffff"
 		},
 		secondary: {
-			main: '#cf4332',
-			light: '#ff755d',
-			dark: '#97010a'
-			
+			main: '#26BE8D',
+			light: '#67f1bd',
+			dark: '#008d60',
+			contrastText: '#000000'
 		}
   },
 };

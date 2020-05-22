@@ -1,12 +1,11 @@
 import styled from 'styled-components/native';
 
 export const Container = styled.View`
-  position: absolute;
-  align-self: center;
-  top: 45px;
-
+  flex: 1;
+  justify-content: center;
 `;
 
 export const ImageLogo = styled.Image`
-  flex: 1;
+  height: 220px;
+  resize-mode: contain;
 `;

@@ -1,14 +1,13 @@
 import React from 'react';
 
-
 import { Container, ImageLogo } from './styles'
 
-import Icon from '../../assets/Icon2.png';
+import image from '../../assets/logo.png';
 
 const Logo = () => {
   return (
     <Container>
-      <ImageLogo source={Icon} ></ImageLogo>
+      <ImageLogo source={image} ></ImageLogo>
     </Container>
   );
 }

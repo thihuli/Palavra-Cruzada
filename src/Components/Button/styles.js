@@ -1,6 +1,5 @@
 import styled from 'styled-components/native';
 
-
 export const ButtonContainer = styled.TouchableOpacity`
   flex-direction: row;
   width: 250px;
@@ -8,17 +7,13 @@ export const ButtonContainer = styled.TouchableOpacity`
   padding: 15px;
   background: ${props => props.background};
   border-radius: 5px;
-  justify-content: center;
-  margin: 7px;
+  justify-content: ${({icon}) => icon ? 'space-between' : 'center'};
+  align-items: center;
+  margin-top: 5px;
 `;
 
 export const ButtonText = styled.Text`
   font-size: 15px;
-  color: ${props => props.textcolor};
+  color: ${props => props.textColor};
   text-align: center;
-`;
-
-export const Icon = styled.View`
-  right: 15px;
-  justify-content: center;
 `;

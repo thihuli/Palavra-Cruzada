@@ -1,8 +1,8 @@
-import React from "react";
+import React, { useContext } from "react";
 import { SafeAreaView, TouchableOpacity, } from "react-native";
 import { MaterialCommunityIcons, AntDesign  } from '@expo/vector-icons';
 import { useNavigation } from '@react-navigation/native';
-
+import { useTheme } from "styled-components/native";
 
 import Background from "../../assets/BackAlt5.jpeg";
 import { Container, ImageBackground, Text, ButtonAling, ContainerInput, LogoContainer } from "./styles";
@@ -10,14 +10,12 @@ import { Container, ImageBackground, Text, ButtonAling, ContainerInput, LogoCont
 import Input from '../../Components/ViewInput';
 import Logo from '../../Components/Logo';
 import CustomButton from '../../Components/Button';
-import theme from "../../theme";
 import Register from '../Register';
+import IconInput from "../../Components/IconInput";
 
-
-
-
-export default function Login() {
+function Login() {
   const navigation = useNavigation();
+  const theme = useTheme();
 
   function NavigateRegister(Register) {
     navigation.navigate('Register', { Register })
@@ -33,38 +31,45 @@ export default function Login() {
           </LogoContainer>
 
           <ContainerInput>
-            <MaterialCommunityIcons name="email-outline" size={24} color="#f5f5f5" />
-            <Input placeholder={'Email'} textContentType={'emailAddress'}></Input>
-            <AntDesign name="lock1" size={24} color="#f5f5f5" />
-            <Input placeholder={'Senha'} secureTextEntry={true} ></Input>
-            <TouchableOpacity onPress={() => alert('Senha')}><Text>Esqueceu sua Senha?</Text></TouchableOpacity>
+            <IconInput 
+              icon={MaterialCommunityIcons}
+              iconName="email-outline"
+              placeholder="E-mail"
+              />
+          </ContainerInput>
+          <ContainerInput>
+            <IconInput 
+              icon={AntDesign}
+              iconName="lock1"
+              placeholder="Senha"
+              />
+          </ContainerInput>
+          <ContainerInput>
+          <TouchableOpacity onPress={() => alert('Senha')}><Text>Esqueceu sua Senha?</Text></TouchableOpacity>
           </ContainerInput>
 
-          
-          
-
           <ButtonAling>        
-            <CustomButton text='Entrar' background={theme.palette.primary.main} textcolor='#fafafa'  onPress={() => alert('Entrou')}  />  
-            <CustomButton text='Cadastre-se' background={theme.palette.primary.main } textcolor='#fafafa' onPress={() => NavigateRegister(Register)} />
+            <CustomButton text='Entrar' background={theme.palette.secondary.main} textColor='#fafafa'  onPress={() => alert('Entrou')}  />  
+            <CustomButton text='Cadastre-se' background={theme.palette.secondary.main } textColor='#fafafa' onPress={() => NavigateRegister(Register)} />
             
             <CustomButton //usando icon da font FontAwesome em vector icons
-              colorIcon='#FFFFFF'
+              iconColor='#FFFFFF'
               text='Entrar usando o Facebook' 
-              background={theme.palette.primary.dark} 
-              textcolor='#fafafa' 
+              background="#4267B2" 
+              textColor='#fafafa' 
               onPress={() => alert('Facebook')} 
-              nameIcon="facebook-official"
-              sizeIcon={35}
+              icon="facebook-official"
+              iconSize={35}
               />
 
               <CustomButton //usando icon da font FontAwesome em vector icons
-              colorIcon='#FFFFFF'
+              iconColor='#FFFFFF'
               text='Entrar usando o Google' 
-              background={theme.palette.secondary.main} 
-              textcolor='#fafafa' 
+              background="#DB4437" 
+              textColor='#fafafa' 
               onPress={() => alert('Google')} 
-              nameIcon="google-plus-circle"
-              sizeIcon={35}
+              icon="google-plus-circle"
+              iconSize={35}
               />
           </ButtonAling>
           
@@ -74,3 +79,5 @@ export default function Login() {
     </Container>
   );
 }
+
+export default Login;

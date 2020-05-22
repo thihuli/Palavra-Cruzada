@@ -4,7 +4,7 @@ import Constants from 'expo-constants';
 
 export const Container = styled.View`
   flex: 1;
-  background-color: #26BE8D;
+  background-color: ${({theme}) => theme.palette.primary.main};
 `;
 
 export const ImageBackground = styled.ImageBackground`
@@ -19,7 +19,6 @@ export const LogoContainer = styled.View`
 
 export const ButtonAling = styled.View`
   align-items: center;
-
 `;
 
 export const Text = styled.Text`
@@ -36,8 +35,7 @@ export const TextButonn = styled.Text`
 `;
 
 export const ContainerInput = styled.View`
-  margin-bottom: 15px;
-
+  margin-bottom: 20px;
 `;
 
 /* export const Touch = styled.TouchableOpacity`
