@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "palavras",
-    "slug": "palavras",
+    "name": "Business Games",
+    "slug": "palavracruzada",
     "platforms": [
       "ios",
       "android",
@@ -13,7 +13,7 @@
     "splash": {
       "image": "./assets/splash.png",
       "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
+      "backgroundColor": "#26BE8D"
     },
     "updates": {
       "fallbackToCacheTimeout": 0
