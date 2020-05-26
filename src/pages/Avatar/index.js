@@ -1,41 +1,37 @@
 import React from 'react';
 import { useNavigation } from '@react-navigation/native';
 
-import { Container, ImageBack, TitleText, AvatarContainer, ButtonContainer, ImageContainer } from './styles';
-import Bg from '../../assets/BackAlt5.jpeg';
+import { Container, TitleText, AvatarContainer, ButtonContainer, ImageContainer } from './styles';
 import CustomButton from '../../Components/Button';
 import theme from '../../theme';
-import GameScreen from '../GameScreen';
-import Avatars from '../../assets/Avatares.png';
+import GameScreenOptions from '../GameScreenOptions';
 import { SafeAreaView } from 'react-native-safe-area-context';
 
 const Avatar = () => {
   
   const navigation = useNavigation();
 
-  function NavigateGame(gameScreen) {
-    navigation.navigate('GameScreen', { gameScreen })
+  function NavigateGame(GameScreenOptions) {
+    navigation.navigate('GameScreenOptions', { GameScreenOptions })
   };
 
 
   return( 
     <Container>
-      <ImageBack >
         <SafeAreaView style={{flex: 1}}>
         
         <TitleText>Selecione o seu Avatar</TitleText>
 
 
         <AvatarContainer>
-          <ImageContainer source={Avatars}/>
+          
         </AvatarContainer>
         
         <ButtonContainer>
-          <CustomButton text='Entrar' background={theme.palette.primary.main} textcolor='#fafafa'  onPress={() => NavigateGame(GameScreen)}  />
+          <CustomButton text='Entrar' background={theme.palette.secondary.main} textColor='#fafafa'  onPress={() => NavigateGame(GameScreenOptions)}  />
         </ButtonContainer>
         
         </SafeAreaView>
-      </ImageBack>
     </Container>
   );
 }

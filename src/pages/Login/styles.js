@@ -15,6 +15,7 @@ export const ImageBackground = styled.ImageBackground`
 
 export const LogoContainer = styled.View`
   flex: 1;
+  align-items: center;
 `;
 
 export const ButtonAling = styled.View`
@@ -37,18 +38,3 @@ export const TextButonn = styled.Text`
 export const ContainerInput = styled.View`
   margin-bottom: 20px;
 `;
-
-/* export const Touch = styled.TouchableOpacity`
-  background: #00709d ;
-  flex-direction: row;
-  width: 250px;
-  height: 50px;
-  justify-content: center;
-  align-items: center;
-  align-self: center;
-  border-radius: 5px;
-  
-`; */
-
-
-/* //resize-mode: cover; */

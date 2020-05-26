@@ -7,7 +7,7 @@ const AppStack = createStackNavigator();
 import Login from "./pages/Login";
 import Register from './pages/Register';
 import Avatar from './pages/Avatar';
-import GameScreen from './pages/GameScreen';
+import GameScreenOptions from './pages/GameScreenOptions';
 
 export default function Routes() {
   return (
@@ -17,7 +17,7 @@ export default function Routes() {
         <AppStack.Screen name="Login" component={Login} />
         <AppStack.Screen name='Register' component={Register}/>
         <AppStack.Screen name='Avatar' component={Avatar}/>
-        <AppStack.Screen name='GameScreen' component={GameScreen}/>
+        <AppStack.Screen name='GameScreenOptions' component={GameScreenOptions}/>
       </AppStack.Navigator>
     </NavigationContainer>
   );

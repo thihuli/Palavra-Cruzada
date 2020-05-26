@@ -7,13 +7,14 @@ export const Container = styled(Animated.View)`
   border-color: ${({focus, theme}) => focus ? theme.palette.secondary.main : "#fff"};
   padding-bottom: 6px;
   align-items: center;
-  transition: all .2s;
 `;
 
 export const TextInput = styled.TextInput`
   margin-left: 10px;
   flex: 1;
   height: 35px;
-  font-size: 1.2em;
+  font-size: 16px;
   color: ${({focus, theme}) => focus ? theme.palette.secondary.main : "#fff"};
 `;
+
+

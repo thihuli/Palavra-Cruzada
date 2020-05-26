@@ -2,7 +2,7 @@ import styled from 'styled-components/native';
 
 export const Container = styled.View`
   flex: 1;
-  background-color: #26BE8D;
+  background-color: ${({theme}) => theme.palette.primary.main};
 `;
 
 export const InputContainer = styled.View`

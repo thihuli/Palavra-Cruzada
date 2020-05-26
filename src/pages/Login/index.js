@@ -1,13 +1,11 @@
-import React, { useContext } from "react";
+import React  from "react";
 import { SafeAreaView, TouchableOpacity, } from "react-native";
 import { MaterialCommunityIcons, AntDesign  } from '@expo/vector-icons';
 import { useNavigation } from '@react-navigation/native';
 import { useTheme } from "styled-components/native";
 
-import Background from "../../assets/BackAlt5.jpeg";
 import { Container, ImageBackground, Text, ButtonAling, ContainerInput, LogoContainer } from "./styles";
 
-import Input from '../../Components/ViewInput';
 import Logo from '../../Components/Logo';
 import CustomButton from '../../Components/Button';
 import Register from '../Register';
@@ -34,14 +32,14 @@ function Login() {
             <IconInput 
               icon={MaterialCommunityIcons}
               iconName="email-outline"
-              placeholder="E-mail"
+              placeholder={"E-mail"}
               />
           </ContainerInput>
           <ContainerInput>
             <IconInput 
               icon={AntDesign}
               iconName="lock1"
-              placeholder="Senha"
+              placeholder={"Senha"}
               />
           </ContainerInput>
           <ContainerInput>
