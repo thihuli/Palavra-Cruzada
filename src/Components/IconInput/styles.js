@@ -6,6 +6,7 @@ export const Container = styled(Animated.View)`
   border-bottom-width: 2px;
   border-color: ${({focus, theme}) => focus ? theme.palette.secondary.main : "#fff"};
   padding-bottom: 6px;
+  margin-bottom: 20px;
   align-items: center;
 `;
 

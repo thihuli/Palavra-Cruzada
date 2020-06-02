@@ -1,46 +1,45 @@
 import styled from 'styled-components/native';
 
 export const Container = styled.View `
-  flex: 1;
   background-color: ${({theme}) => theme.palette.primary.main};
+  flex: 1;
 `;
 
 export const TouchableAction = styled.TouchableOpacity`
-  
+  flex: 1;
 `;
 
 export const Header = styled.View`
-  top: 9px;
-  justify-content: center;
   align-items: center;
-  flex: 1;
+  margin-top: 38px;
 `;
 
 export const HeaderDivision = styled.View`
   flex-direction: row;
-  margin: 2px;
 `;
 
+export const TouchableActionHeader = styled.TouchableOpacity`
+  margin: 5px;
+`;
 export const ImageActionHeader = styled.Image`
-  margin: 20px;
 `;
 
 export const Body = styled.View`
-  justify-content: center;
+  flex: 1;
+  align-items: stretch;
 `;
 
 export const ImageActionBody = styled.Image`
+  flex: 1;
   width: 100%;
-  height: 290px;
 `;
 
-
-export const Foother = styled.View`
+export const Footer = styled.View`
   flex-direction: row;
-  justify-content: center;
 `;
 
 export const ImageActionFooter = styled.Image`
-  width: 160px;
-  height: 160px;
+  width: 100%;
+  height: 140px;
 `;
+

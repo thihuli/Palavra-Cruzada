@@ -7,7 +7,7 @@ import image from '../../assets/logo.png';
 const Logo = () => {
   return (
     <Container>
-      <ImageLogo source={image} ></ImageLogo>
+      <ImageLogo source={image} />
     </Container>
   );
 }

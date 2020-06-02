@@ -3,7 +3,6 @@ import { useNavigation } from '@react-navigation/native';
 
 
 import { Container, InputContainer, ButtonContainer } from './styles';
-import ViewInput from '../../Components/ViewInput'
 import { ImageBackground, } from '../Login/styles';
 import { MaterialCommunityIcons, AntDesign  } from '@expo/vector-icons';
 
@@ -47,7 +46,6 @@ return (
               iconName="lock1"
               placeholder="Repetir Senha"
               />
-
           </InputContainer>
           
           <ButtonContainer>

@@ -28,22 +28,18 @@ function Login() {
             <Logo/>
           </LogoContainer>
 
+          <IconInput 
+            icon={MaterialCommunityIcons}
+            iconName="email-outline"
+            placeholder={"E-mail"}
+            />
+          <IconInput 
+            icon={AntDesign}
+            iconName="lock1"
+            placeholder={"Senha"}
+            />
           <ContainerInput>
-            <IconInput 
-              icon={MaterialCommunityIcons}
-              iconName="email-outline"
-              placeholder={"E-mail"}
-              />
-          </ContainerInput>
-          <ContainerInput>
-            <IconInput 
-              icon={AntDesign}
-              iconName="lock1"
-              placeholder={"Senha"}
-              />
-          </ContainerInput>
-          <ContainerInput>
-          <TouchableOpacity onPress={() => alert('Senha')}><Text>Esqueceu sua Senha?</Text></TouchableOpacity>
+            <TouchableOpacity onPress={() => alert('Senha')}><Text>Esqueceu sua Senha?</Text></TouchableOpacity>
           </ContainerInput>
 
           <ButtonAling>        

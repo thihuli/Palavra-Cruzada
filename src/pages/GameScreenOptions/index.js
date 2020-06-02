@@ -1,64 +1,77 @@
-import React from 'react';
-import { SafeAreaView } from 'react-native';
+import React, { useState } from 'react';
 
-import { Container, Body, Foother, Header, ImageActionBody, TouchableAction, ImageActionFooter, HeaderDivision, ImageActionHeader } from './styles';
+import PopUpModal from '../../pages/PopUp'
+
+import { 
+  Container, 
+  Body, 
+  Footer, 
+  Header, 
+  ImageActionBody, 
+  TouchableAction, 
+  ImageActionFooter, 
+  HeaderDivision, 
+  ImageActionHeader,
+  TouchableActionHeader } from './styles';
+
 import playAlone from '../../assets/gameScreen/playalone.png';
 import playPVP from '../../assets/gameScreen/playPVP.png';
 import rank from '../../assets/gameScreen/Rank.png';
 import modos from '../../assets/gameScreen/Modos.png';
 import shop from '../../assets/gameScreen/Shop.png';
-
 import desafios from '../../assets/gameScreen/Desafios.png';
 import durons from '../../assets/gameScreen/Durons.png';
 import levelStatus from '../../assets/gameScreen/LevelStatust.png';
 import userInfo from '../../assets/gameScreen/UserInfo.png';
 import coins from '../../assets/gameScreen/CoinsGame.png';
 
-const GameScreenOptions = () => {
 
+
+
+const GameScreenOptions = () => {
+  const [modalVisible, setModalVisible] = useState(false);
   return (
     <Container>
-      <SafeAreaView style={{flex: 1,}}>
+
+      <PopUpModal visible={modalVisible} setVisible={setModalVisible} />
+
+        
+
         <Header>
           <HeaderDivision>
-            <TouchableAction onPress={() => {} } >
-              <ImageActionHeader  source={levelStatus}  />
-            </TouchableAction>
-            <TouchableAction onPress={() => {} } >
+            <TouchableActionHeader onPress={() => {} } >
+              <ImageActionHeader  source={levelStatus} />
+            </TouchableActionHeader>
+            <TouchableActionHeader onPress={() => {} } >
               <ImageActionHeader  source={durons}  />
-            </TouchableAction>
-            <TouchableAction onPress={() => {} } >
+            </TouchableActionHeader>
+            <TouchableActionHeader onPress={() => {} } >
               <ImageActionHeader  source={coins}  />
-            </TouchableAction>
+            </TouchableActionHeader>
           </HeaderDivision>            
 
           <HeaderDivision>
-            <TouchableAction onPress={() => {} } >
+            <TouchableActionHeader onPress={() => {} } >
               <ImageActionHeader  source={userInfo}  />
-            </TouchableAction>
-            <TouchableAction onPress={() => {} } >
+            </TouchableActionHeader>
+            <TouchableActionHeader onPress={() => setModalVisible(true) } >
               <ImageActionHeader  source={desafios}  />
-            </TouchableAction>
+            </TouchableActionHeader>
 
             
           </HeaderDivision>
         </Header>
 
         <Body>
-
           <TouchableAction onPress={() => {} } >
-            <ImageActionBody source={playAlone}/>  
+            <ImageActionBody source={playAlone}  />  
           </TouchableAction>
-
-
           <TouchableAction onPress={() => {}} >
-            <ImageActionBody source={playPVP}/>
+            <ImageActionBody source={playPVP} />
           </TouchableAction>
-
-
         </Body>
         
-        <Foother>
+        <Footer>
           <TouchableAction onPress={() => {}} >
             <ImageActionFooter source={shop}/>
           </TouchableAction>
@@ -68,9 +81,8 @@ const GameScreenOptions = () => {
           <TouchableAction onPress={() => {}} >
             <ImageActionFooter source={rank}/>
           </TouchableAction>
-        </Foother>
+        </Footer>
         
-      </SafeAreaView>
     </Container>
     );
 }
