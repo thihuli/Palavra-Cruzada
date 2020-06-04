@@ -29,7 +29,9 @@ import coins from '../../assets/gameScreen/CoinsGame.png';
 
 
 const GameScreenOptions = () => {
+  
   const [modalVisible, setModalVisible] = useState(false);
+
   return (
     <Container>
 
