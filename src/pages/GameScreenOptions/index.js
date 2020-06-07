@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
+import { useNavigation } from '@react-navigation/native';
 
 import PopUpModal from '../../pages/PopUp'
+import Ranking from '../Ranking';
 
 import { 
   Container, 
@@ -31,6 +33,12 @@ import coins from '../../assets/gameScreen/CoinsGame.png';
 const GameScreenOptions = () => {
   
   const [modalVisible, setModalVisible] = useState(false);
+  const navigation = useNavigation();
+
+  function navigateScreens(ranking) {
+    navigation.navigate('Ranking', {Ranking})
+
+  }
 
   return (
     <Container>
@@ -80,7 +88,7 @@ const GameScreenOptions = () => {
           <TouchableAction onPress={() => {}} >
             <ImageActionFooter source={modos}/>
           </TouchableAction>
-          <TouchableAction onPress={() => {}} >
+          <TouchableAction onPress={() => navigateScreens(Ranking) } >
             <ImageActionFooter source={rank}/>
           </TouchableAction>
         </Footer>
