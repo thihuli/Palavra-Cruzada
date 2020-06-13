@@ -6,14 +6,13 @@ export const Container = styled.View`
   background-color: ${({theme}) => theme.palette.secondary.main};
 `;
 
-export const TopBar = styled.View`
-
-`;
 
 export const RankBar = styled.View`
   align-items: center;
   margin-top: 38px;
-  border-bottom-width: 0.6px;
+  border-bottom-width: 0.4px;
+  flex-direction: row;
+
 `;
 
 export const RankBarImage = styled.Image`
@@ -23,6 +22,18 @@ export const RankBarImage = styled.Image`
 `;
 
 export const BackPage = styled.View`
-  width: 50px;
-  background-color: gray;
+  margin-left: 10px;
+  margin-right: 130px;
+`;
+
+export const Wrapper = styled.ScrollView`
+  
+`;
+
+export const Box = styled.View`
+  width: 95%;
+  height: 68px;
+  background-color: ${({theme}) => theme.palette.primary.main};
+  margin-top: 6px;
+  margin-bottom: 4px;
 `;

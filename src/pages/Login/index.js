@@ -9,6 +9,7 @@ import { Container, ImageBackground, Text, ButtonAling, ContainerInput, LogoCont
 import Logo from '../../Components/Logo';
 import CustomButton from '../../Components/Button';
 import Register from '../Register';
+import GameScreen from '../GameScreenOptions'
 import IconInput from "../../Components/IconInput";
 
 function Login() {
@@ -17,6 +18,10 @@ function Login() {
 
   function NavigateRegister(Register) {
     navigation.navigate('Register', { Register })
+  }
+
+  function NavigateGame(GameScreen) {
+    navigation.navigate('GameScreenOptions', {GameScreen})
   }
 
   return (
@@ -43,7 +48,7 @@ function Login() {
           </ContainerInput>
 
           <ButtonAling>        
-            <CustomButton text='Entrar' background={theme.palette.secondary.main} textColor='#fafafa'  onPress={() => alert('Entrou')}  />  
+            <CustomButton text='Entrar' background={theme.palette.secondary.main} textColor='#fafafa'  onPress={() => NavigateGame(GameScreen)}  />  
             <CustomButton text='Cadastre-se' background={theme.palette.secondary.main } textColor='#fafafa' onPress={() => NavigateRegister(Register)} />
             
             <CustomButton //usando icon da font FontAwesome em vector icons
